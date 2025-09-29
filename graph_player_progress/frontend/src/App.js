@@ -14,15 +14,19 @@ import Home from "./pages/home";
 import Guilds from "./pages/guild_profile";
 import UserProfile from "./pages/user_profile";
 import Graphs from "./pages/graph_page";
+import Toggle from "react-toggle";
 
-function toggleDarkMode() {
-        <button 
-        onClick={toggleDarkMode} 
-        className="ml-4 px-3 py-1 border rounded"
-      >
-        {darkMode ? "Light Mode" : "Dark Mode"}
-      </button>
-}
+export const toggleDarkMode = () => {
+  const [isDark, setIsDark] = userState(true);
+    return(
+      <Toggle
+        checked={isDark}
+        onChange={({ target }) => setIsDark(target.checked)}
+        icons={{ checked: "🌙", unchecked: "🔆" }}
+        aria-label="Dark mode toggle"
+      />
+    );
+};
 
 
 
@@ -37,14 +41,7 @@ function App() {
             <Link to="pages/signup" style={{ marginRight: '1rem' }}>Sign Up</Link>
             <Link to="pages/user_profile" style={{ marginRight: '1rem'}}>User Profile</Link>
             <Link to="pages/graph_page" style={{ marginRight: '1rem'}}>Graphs</Link>
-            <darkModeHandler />
-              <button 
-                style= {{marginLeft: "auto", color: '#415f81ff', background: '#82fd77ff'}}
-                onClick={toggleDarkMode}
-                className="ml-4 px-3 py-1 border rounded"
-              >
-                {darkMode ? "Light Mode" : "Dark Mode"}
-              </button>
+            <toggleDarkMode />
           </nav>
 
         <Routes>
