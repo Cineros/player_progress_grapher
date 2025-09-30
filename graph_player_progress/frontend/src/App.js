@@ -16,6 +16,15 @@ import UserProfile from "./pages/user_profile";
 import Graphs from "./pages/graph_page";
 
 const ToggleSwitch = ({ label }) => {
+  const [darkMode, setDarkMode] = useState(true);
+  useEffect(() => {localStorage.setItem('state', JSON.stringify(darkMode))}, [darkMode])
+
+  const handleChange = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem('state', JSON.stringify(!darkMode))
+  };
+
   return (
     <div className="container">
       {label}{" "}
@@ -23,6 +32,7 @@ const ToggleSwitch = ({ label }) => {
         <input 
           type="checkbox"
           className="checkbox"
+          onChange={handleChange}
           name={label}
           id={label}
         >
@@ -44,15 +54,19 @@ function App() {
 
   return (
       <Router>
-          <nav style={{ display: "flex", padding: '1rem', background: '#b4bbcfff'}}>
-            <Link to="pages/home" style={{ marginRight: '1rem' }}>Home</Link>
-            <Link to="pages/guild_profile" style={{ marginRight: '1rem' }}>Guilds</Link>
-            <Link to="pages/signup" style={{ marginRight: '1rem' }}>Sign Up</Link>
-            <Link to="pages/user_profile" style={{ marginRight: '1rem'}}>User Profile</Link>
-            <Link to="pages/graph_page" style={{ marginRight: '1rem'}}>Graphs</Link>
-            <ToggleSwitch label=" " />
+        <h1>
+          Header
+        </h1>
+          <nav style={{ display: "flex", alignItems: 'stretch', padding: '0', background: '#2b2b2bff', color: '#eee'}}>
+            <ul>
+              <li><Link to="pages/home" style={{ marginRight: '1rem' }}> <button>Home</button></Link></li>
+              <li><Link to="pages/guild_profile" style={{ marginRight: '1rem' }}><button>Guilds</button></Link></li>
+              <li><Link to="pages/signup" style={{ marginRight: '1rem' }}><button>Sign Up</button></Link></li>
+              <li><Link to="pages/user_profile" style={{ marginRight: '1rem'}}><button>User Profile</button></Link></li>
+              <li><Link to="pages/graph_page" style={{ marginRight: '1rem'}}><button>Graphs</button></Link></li>
+              <ToggleSwitch label=" " />
+            </ul>
           </nav>
-
         <Routes>
           <Route path="pages/home" element={<Home />} />
           <Route path="pages/guild_profile" element={<Guilds />} />
