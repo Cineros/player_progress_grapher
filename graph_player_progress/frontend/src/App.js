@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
@@ -15,6 +14,8 @@ import Home from "./pages/home";
 import Guilds from "./pages/guild_profile";
 import UserProfile from "./pages/user_profile";
 import Graphs from "./pages/graph_page";
+import GraphLogo from "./GraphLogo.png";
+import Title from "./Title.png";
 
 const ToggleSwitch = ({ label }) => {
   const [darkMode, setDarkMode] = useState(true);
@@ -50,15 +51,22 @@ const ToggleSwitch = ({ label }) => {
   );
 };
 
+function Header(){
+  return (
+      <h1>
+        <a href='./home'><img src={GraphLogo} height="100" width="120"/></a>
+        <a href='./home'><img src={Title} /></a>
+        
+      </h1>
+  )
+}
 
 function App() {
 
   return (
       <Router>
-        <h1>
-          Header
-        </h1>
-          <nav style={{ display: "flex", alignItems: 'stretch', padding: '0', background: '#535353ff', color: '#eee'}}>
+          <Header />
+          <nav style={{ display: "flex", alignItems: 'stretch', padding: '0', background: '#535353ff', color: '#eee', border: "2px inset #000000ff"}}>
             <ul>
               <li><Link to="pages/home" style={{ marginRight: '1rem' }}> <button>Home</button></Link></li>
               <li><Link to="pages/guild_profile" style={{ marginRight: '1rem' }}><button>Guilds</button></Link></li>

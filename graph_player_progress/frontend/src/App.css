@@ -42,8 +42,7 @@
 }
 
 body {
-  --color-background: #e6dcdc;
-  --color-foreground: #1f1f1f;
+  background-color: 'coral';
 }
 
 .container {
@@ -155,6 +154,44 @@ ul li {
 }
 
 body.dark-mode {
-  background-color: #535353ff;
+  background-color: rgb(65, 65, 65);
   color: white;
+}
+
+h1 {
+  background-image: linear-gradient(to bottom, rgb(114, 114, 114), rgb(39, 39, 39));
+  background-color: grey;
+  display: flex;
+  align-items: stretch;
+  margin: auto;
+  font-size: 50px;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: xx-large;
+  text-align: center;
+}
+
+h3 {
+  border: 2px solid rgb(80, 80, 80);
+  border-radius: 2px;
+  border-style: outset;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 35px;
+  padding: 5px;
+  margin: 0;
+}
+
+article {
+  margin-bottom: 4px;
+  text-align: "left";
+  padding: 4px; 
+  border: 2px outset rgb(252, 167, 89);
+}
+
+h4 {
+  font-size: 20px;
+  display: inline-flex;
+  padding-right: 0px;
 }
