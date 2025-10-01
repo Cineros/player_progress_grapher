@@ -7,7 +7,8 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-    Link
+    Link,
+    Navigate
 } from "react-router-dom";
 import SignUp from "./pages/signup";
 import Home from "./pages/home";
@@ -57,7 +58,7 @@ function App() {
         <h1>
           Header
         </h1>
-          <nav style={{ display: "flex", alignItems: 'stretch', padding: '0', background: '#2b2b2bff', color: '#eee'}}>
+          <nav style={{ display: "flex", alignItems: 'stretch', padding: '0', background: '#535353ff', color: '#eee'}}>
             <ul>
               <li><Link to="pages/home" style={{ marginRight: '1rem' }}> <button>Home</button></Link></li>
               <li><Link to="pages/guild_profile" style={{ marginRight: '1rem' }}><button>Guilds</button></Link></li>
@@ -68,6 +69,7 @@ function App() {
             </ul>
           </nav>
         <Routes>
+          <Route index element={<Navigate to ="/pages/home" replace />} />
           <Route path="pages/home" element={<Home />} />
           <Route path="pages/guild_profile" element={<Guilds />} />
           <Route path="pages/signup" element={<SignUp />} />
