@@ -1,6 +1,8 @@
 import React from "react";
 
 
+//This *might* need a model but I plan to scrape WoWhead for their articles and link driectly to them.
+
 function News() {
     const sampleData = [
         {

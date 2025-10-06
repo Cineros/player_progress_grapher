@@ -1,6 +1,8 @@
 import React from "react";
 
 
+//This will need a model from the backend but all the updates will be written by me!
+
 function Updates() {
     const sampleData = [
         {

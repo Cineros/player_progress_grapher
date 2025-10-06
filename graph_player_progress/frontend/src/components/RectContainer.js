@@ -1,5 +1,8 @@
 import React from "react";
 
+
+//This is a generic rectangle component, I wonder if I can use this like normal OOP where I can inherit from this?
+
 function RectContainer({width = "300px", height = "200px", children}) {
     const style = {
         width: width,
