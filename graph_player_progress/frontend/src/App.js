@@ -56,7 +56,6 @@ function Header(){
       <h1>
         <a href='./home'><img src={GraphLogo} height="100" width="120"/></a>
         <a href='./home'><img src={Title} /></a>
-        
       </h1>
   )
 }
