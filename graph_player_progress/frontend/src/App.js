@@ -54,9 +54,14 @@ const ToggleSwitch = ({ label }) => {
 function Header(){
   return (
       <h1>
+<<<<<<< HEAD
         <a href='./home' style={{marginLeft: "auto"}}><img src={GraphLogo} height="100" width="120"/></a>
         <a href='./home' style={{marginRight: "auto"}}><img src={Title} /></a>
         
+=======
+        <a href='./home'><img src={GraphLogo} height="100" width="120"/></a>
+        <a href='./home'><img src={Title} /></a>
+>>>>>>> refs/remotes/origin/frontend
       </h1>
   )
 }

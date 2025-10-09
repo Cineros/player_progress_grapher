@@ -1,5 +1,9 @@
 import React from "react";
 
+
+//Need a model for the backend to store these and display them. 
+//I'm also thinking that this component is half backed since well need a way for users to create these and respond to them.
+//I may be able to actually import a text box component so I don't have to write a new one, but I might anyway.
 function Blog() {
     const samplePosts = [
         {

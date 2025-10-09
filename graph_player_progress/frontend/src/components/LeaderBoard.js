@@ -1,6 +1,6 @@
 import React from "react";
 
-
+//This will need a model as well, the model should rotate on a set interval and be fully auto and be handled by backend logic.
 
 function LeaderBoard(){
 
