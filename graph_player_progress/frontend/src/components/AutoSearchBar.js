@@ -3,10 +3,13 @@ const AutoSearchBar  = ({query, setQuery}) => {
     return (
       <div
         style={{
-          padding: "12px",
-          borderRadius: "8px",
-          border: "1px solid #ccc",
-          width: "300px",
+          padding: "4px",
+          borderRadius: "4px",
+          border: "2px #777777ff",
+          backgroundColor: "#4d4d4dff",
+          borderStyle: "inset",
+          height: "auto",
+          width: "auto",
           display: "flex",
           justifyContent: "start",
           gap: "0.5em",
@@ -15,7 +18,7 @@ const AutoSearchBar  = ({query, setQuery}) => {
         }}
       >
 
-        <img src={searchLogo} alt="looking-glass" height={16} width={16} />
+        <img src={searchLogo} alt="looking-glass" height={18} width={18} />
         <input
           type="text"
           value={query}
@@ -24,6 +27,8 @@ const AutoSearchBar  = ({query, setQuery}) => {
             width: "100%",
             border: 'none',
             zIndex: "1",
+            height: "auto",
+            backgroundColor: "#474747",
           }}
         />
       </div>

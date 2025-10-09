@@ -191,3 +191,13 @@ h4 {
   display: inline-flex;
   padding-right: 0px;
 }
+
+h6 {
+  background-image: linear-gradient(to bottom, rgb(114, 114, 114), rgb(39, 39, 39));
+  background-color: grey;
+  display: flow-root;
+  align-items: stretch;
+  margin: auto;
+  font-size: 50px;
+  justify-content: space-between;
+}
