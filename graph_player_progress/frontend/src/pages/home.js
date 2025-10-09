@@ -4,18 +4,20 @@ import RectContainer from '../components/RectContainer.js';
 import LeaderBoard from '../components/LeaderBoard.js';
 import News from '../components/News.js';
 import Updates from '../components/Updates.js';
+import PageContainer from '../components/PageContainer.js';
 
 
 
 function Home(){
     return(
-            <div>
+        <PageContainer>
+            <div style={{ width: "80%"}}>
                 <h2>
                     Welcome to the Player Progress Graphing WebApp
                 </h2>
                 <div style={{ display: "flex "}}>
                     <div style={{ flex: 3, display: "flex", flexDirection: "column"}}>
-                        <RectContainer width="auto" height="50%">
+                        <RectContainer width="auto" height="80%">
                                 <Blog />
                         </RectContainer>
                         <RectContainer width="auto" height="50%">
@@ -34,6 +36,7 @@ function Home(){
                 </div>
 
             </div>
+        </PageContainer>
     );
 }
 

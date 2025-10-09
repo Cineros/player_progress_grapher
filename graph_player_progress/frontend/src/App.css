@@ -41,10 +41,6 @@
   }
 }
 
-body {
-  background-color: 'coral';
-}
-
 .container {
   position: absolute;
   right: 1rem;

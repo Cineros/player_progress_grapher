@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import SignUp from "./pages/signup";
 import Home from "./pages/home";
-import Guilds from "./pages/guild_profile";
+import Guilds from "./pages/guilds";
 import UserProfile from "./pages/user_profile";
 import Graphs from "./pages/graph_page";
 import GraphLogo from "./GraphLogo.png";
@@ -54,8 +54,8 @@ const ToggleSwitch = ({ label }) => {
 function Header(){
   return (
       <h1>
-        <a href='./home'><img src={GraphLogo} height="100" width="120"/></a>
-        <a href='./home'><img src={Title} /></a>
+        <a href='./home' style={{marginLeft: "auto"}}><img src={GraphLogo} height="100" width="120"/></a>
+        <a href='./home' style={{marginRight: "auto"}}><img src={Title} /></a>
         
       </h1>
   )
