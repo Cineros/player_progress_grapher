@@ -150,6 +150,7 @@ ul li {
 }
 
 body.dark-mode {
+  background-image: linear-gradient(to left, rgb(32, 32, 32), rgb(65, 65, 65), rgb(32, 32, 32));
   background-color: rgb(65, 65, 65);
   color: white;
 }
